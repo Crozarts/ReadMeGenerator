@@ -55,8 +55,18 @@ function promptUser() {
         },
         {
             type: "input",
+            message: "What is the title of this link?",
+            name: "link1Title"
+        },
+        {
+            type: "input",
             message: "Please add 2nd link including http:// tag",
             name: "link2"
+        },
+        {
+            type: "input",
+            message: "What is the title of this link?",
+            name: "link2Title"
         },
         {
             type: "list",
@@ -84,7 +94,7 @@ promptUser()
             data.icon = "[![License: GPL 3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
         }
         const readMe = generateReadMe(data)
-        return writeFileAsync("README.md", readMe)
+        return writeFileAsync("README1.md", readMe)
     })
     .then(function () {
         console.log("Success");
